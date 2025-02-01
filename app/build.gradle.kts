@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.cvgs.androidmodule1"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.cvgs.androidmodule1"
