@@ -48,3 +48,11 @@ google-services.json
 # Android Profiling
 *.hprof
 
+#Excercises made during class
+**/exercise/classroom/*
+
+**/res/layout/*
+!**/res/layout/*_shared.xml
+# Add the main layout
+
+
