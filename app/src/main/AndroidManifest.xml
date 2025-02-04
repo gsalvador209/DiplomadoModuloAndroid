@@ -15,40 +15,31 @@
         android:theme="@style/Theme.AndroidModule1"
         tools:targetApi="31">
         <activity
+            android:name=".exercise.home.alexisescalona.AlexisSendParameters2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.AlexisSendParameters1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.AlexisImplicitIntentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.AlexisLifeCycleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.AlexisHomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".exercise.home.GlobalHomeActivity"
             android:exported="true">
-            <!--Esta es la actividad principal donde haremos entregas-->
+
+            <!-- Esta es la actividad principal donde haremos entregas -->
             <intent-filter>
+
                 <!-- La activity main con intent filtred debe cerrarse con la tag de cierre -->
                 <action android:name="android.intent.action.MAIN" /> <!-- Determina que esta será la primer pantalla -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".exercise.classroom.explicitintent.SecondScreenActivity"
-            android:exported="false" />
-        <activity
-            android:name=".exercise.classroom.explicitintent.HomeActivity"
-            android:exported="true">
-        </activity>
-        <activity
-            android:name=".exercise.classroom.ImplicitIntentActivity"
-            android:exported="true">
-
-            <!--
-                Si se quisiera que esta actividad maneje intents de otras apps, puedes crearlo con
-                action y el intent posible
-                y con data y mimeType
-            -->
-        </activity>
-        <activity android:name=".exercise.classroom.ExampleManualClass" /> <!-- Crear la actividad, su xlm, referenciarlos -->
-        <activity
-            android:name=".exercise.classroom.ExampleCreationActivity"
-            android:exported="false" /> <!-- Determina si puede ser llamado por otras aplicaciones -->
-        <activity
-            android:name=".exercise.classroom.LiveCycleActivity"
-            android:exported="true"> <!-- La actividad principal debe ser True para el exported -->
-
         </activity>
     </application>
 
