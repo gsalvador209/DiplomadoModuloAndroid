@@ -15,6 +15,21 @@
         android:theme="@style/Theme.AndroidModule1"
         tools:targetApi="31">
         <activity
+            android:name=".exercise.home.ivanusielrj.UsielReturnInfoActivityHomework"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.ivanusielrj.UsielCallActivityHomework"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.ivanusielrj.UsielLinkButtonActvityHomework"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.ivanusielrj.UsielLifeCicleActivityHomework"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.ivanusielrj.UsielHomeActivityHomework"
+            android:exported="false" />
+        <activity
             android:name=".exercise.home.alexisescalona.AlexisSendParameters2Activity"
             android:exported="false" />
         <activity

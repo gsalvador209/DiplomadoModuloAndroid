@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.cvgs.androidmodule1.R
 import com.cvgs.androidmodule1.exercise.home.alexisescalona.AlexisHomeActivity
+import com.cvgs.androidmodule1.exercise.home.ivanusielrj.UsielHomeActivityHomework
 
 class GlobalHomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +27,13 @@ class GlobalHomeActivity : AppCompatActivity() {
         btnOpenAlexisHomeActivity.setOnClickListener {
             val alexisHomeIntent = Intent(this, AlexisHomeActivity::class.java)
             startActivity(alexisHomeIntent)
+        }
+
+        val btnOpenUsielHomeActivity = findViewById<Button>(R.id.bntUsiel)
+
+        btnOpenUsielHomeActivity.setOnClickListener {
+            val usielisHomeIntent = Intent(this, UsielHomeActivityHomework::class.java)
+            startActivity(usielisHomeIntent)
         }
     }
 }
