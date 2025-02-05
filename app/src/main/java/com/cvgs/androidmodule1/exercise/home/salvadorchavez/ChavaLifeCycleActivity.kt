@@ -1,7 +1,6 @@
 package com.cvgs.androidmodule1.exercise.home.salvadorchavez
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -9,7 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.cvgs.androidmodule1.R
 
-class LifeCicle : AppCompatActivity() {
+class ChavaLifeCycleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
