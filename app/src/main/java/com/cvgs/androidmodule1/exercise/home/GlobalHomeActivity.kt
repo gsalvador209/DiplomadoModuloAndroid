@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.cvgs.androidmodule1.R
 import com.cvgs.androidmodule1.exercise.home.alexisescalona.AlexisHomeActivity
 import com.cvgs.androidmodule1.exercise.home.ivanusielrj.UsielHomeActivityHomework
+import com.cvgs.androidmodule1.exercise.home.salvadorchavez.ChavaMenuActivity
 
 class GlobalHomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,18 +23,23 @@ class GlobalHomeActivity : AppCompatActivity() {
             insets
         }
 
-        val btnOpenAlexisHomeActivity = findViewById<Button>(R.id.bntAlexis)
+        val btnOpenAlexisHomeActivity = findViewById<Button>(R.id.btnAlexis)
+        val btnOpenUsielHomeActivity = findViewById<Button>(R.id.btnUsiel)
+        val btnOpenSalvadorHomeActivity = findViewById<Button>(R.id.btnSalvador)
 
         btnOpenAlexisHomeActivity.setOnClickListener {
             val alexisHomeIntent = Intent(this, AlexisHomeActivity::class.java)
             startActivity(alexisHomeIntent)
         }
 
-        val btnOpenUsielHomeActivity = findViewById<Button>(R.id.bntUsiel)
-
         btnOpenUsielHomeActivity.setOnClickListener {
             val usielisHomeIntent = Intent(this, UsielHomeActivityHomework::class.java)
             startActivity(usielisHomeIntent)
+        }
+
+        btnOpenSalvadorHomeActivity.setOnClickListener{
+            val salvadorHomeIntent = Intent(this, ChavaMenuActivity::class.java)
+            startActivity(salvadorHomeIntent)
         }
     }
 }
