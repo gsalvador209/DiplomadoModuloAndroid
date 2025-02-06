@@ -9,26 +9,26 @@
 
     <!--Cambiar parent por algun layout-->
     <Button
-        android:id="@+id/bntSalvador"
+        android:id="@+id/btnSalvador"
         android:text="Salvador Chavez"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/bntUsiel"
+        app:layout_constraintBottom_toTopOf="@+id/btnUsiel"
         android:layout_margin="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/bntAlexis"
+        android:id="@+id/btnAlexis"
         android:text="Alexis Escalona"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/bntFer"
+        app:layout_constraintBottom_toTopOf="@+id/btnFer"
         android:layout_margin="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
 
     <Button
-        android:id="@+id/bntUsiel"
+        android:id="@+id/btnUsiel"
         android:text="Usiel Ramirez"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,7 +38,7 @@
 
 
     <Button
-        android:id="@+id/bntFer"
+        android:id="@+id/btnFer"
         android:text="Fernando Lory"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
