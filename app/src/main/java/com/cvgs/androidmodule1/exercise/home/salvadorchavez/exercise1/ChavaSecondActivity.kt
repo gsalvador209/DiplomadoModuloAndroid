@@ -1,4 +1,4 @@
-package com.cvgs.androidmodule1.exercise.home.salvadorchavez.excercise1
+package com.cvgs.androidmodule1.exercise.home.salvadorchavez.exercise1
 
 import android.annotation.SuppressLint
 import android.content.Intent

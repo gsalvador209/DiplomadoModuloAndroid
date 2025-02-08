@@ -36,19 +36,19 @@
             android:name=".exercise.home.salvadorchavez.ChavaModuleMenuActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.salvadorchavez.ChavaSecondActivity"
+            android:name=".exercise.home.salvadorchavez.exercise1.ChavaSecondActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.salvadorchavez.ChavaFirstActivity"
+            android:name=".exercise.home.salvadorchavez.exercise1.ChavaFirstActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.salvadorchavez.ChavaImplicitIntentActivity"
+            android:name=".exercise.home.salvadorchavez.exercise1.ChavaImplicitIntentActivity"
             android:exported="false" />
         <activity
             android:name=".exercise.home.salvadorchavez.ChavaFirstHomework"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.salvadorchavez.ChavaLifeCycleActivity"
+            android:name=".exercise.home.salvadorchavez.exercise1.ChavaLifeCycleActivity"
             android:exported="false" />
         <activity
             android:name=".exercise.home.ivanusielrj.UsielReturnInfoActivityHomework"

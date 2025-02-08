@@ -10,7 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.cvgs.androidmodule1.R
 import com.cvgs.androidmodule1.exercise.home.alexisescalona.AlexisHomeActivity
 import com.cvgs.androidmodule1.exercise.home.ivanusielrj.UsielHomeActivityHomework
-import com.cvgs.androidmodule1.exercise.home.salvadorchavez.ChavaMenuActivity
+import com.cvgs.androidmodule1.exercise.home.salvadorchavez.ChavaModuleMenuActivity
 
 class GlobalHomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +38,7 @@ class GlobalHomeActivity : AppCompatActivity() {
         }
 
         btnOpenSalvadorHomeActivity.setOnClickListener{
-            val salvadorHomeIntent = Intent(this, ChavaMenuActivity::class.java)
+            val salvadorHomeIntent = Intent(this, ChavaModuleMenuActivity::class.java)
             startActivity(salvadorHomeIntent)
         }
     }

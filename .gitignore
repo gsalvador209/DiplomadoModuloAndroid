@@ -49,7 +49,7 @@ google-services.json
 *.hprof
 
 #Excercises made during class
-**/exercise/classroom/*
+**/exercise/classroom/
 
 # Add the main layout
 
