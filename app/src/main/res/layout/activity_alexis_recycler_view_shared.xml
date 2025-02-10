@@ -5,6 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".exercise.home.alexisescalona.exercise1.AlexisLifeCycleActivity">
+    tools:context=".exercise.home.alexisescalona.exercise2.recyclerview.AlexisRecyclerViewActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAnimal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

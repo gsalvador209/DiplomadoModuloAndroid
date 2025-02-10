@@ -15,6 +15,37 @@
         android:theme="@style/Theme.AndroidModule1"
         tools:targetApi="31">
         <activity
+            android:name=".exercise.home.alexisescalona.homework1.AlexisRegistrationSuccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.homework1.AlexisRegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.exercise2.recyclerview.AlexisRecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.exercise2.AlexisComponentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.exercise2.AlexisConstraintLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.exercise2.AlexisRelativeLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.exercise2.AlexisLinearLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.exercise2.AlexisFrameLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.exercise2.AlexisHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.AlexisHomeActivity"
+            android:exported="false" />
+        <!--
+        <activity
             android:name=".exercise.classroom.graphiccomponent.recyclerview.RecyclerViewActivity"
             android:exported="false" />
         <activity
@@ -32,23 +63,24 @@
         <activity
             android:name=".exercise.classroom.graphiccomponent.ChavaFrameLayoutActivity"
             android:exported="false" />
+        -->
         <activity
             android:name=".exercise.home.salvadorchavez.ChavaModuleMenuActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.salvadorchavez.ChavaSecondActivity"
+            android:name=".exercise.home.salvadorchavez.excercise1.ChavaSecondActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.salvadorchavez.ChavaFirstActivity"
+            android:name=".exercise.home.salvadorchavez.excercise1.ChavaFirstActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.salvadorchavez.ChavaImplicitIntentActivity"
+            android:name=".exercise.home.salvadorchavez.excercise1.ChavaImplicitIntentActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.salvadorchavez.ChavaFirstHomework"
+            android:name=".exercise.home.salvadorchavez.excercise1.ChavaFirstHomeworkActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.salvadorchavez.ChavaLifeCycleActivity"
+            android:name=".exercise.home.salvadorchavez.excercise1.ChavaLifeCycleActivity"
             android:exported="false" />
         <activity
             android:name=".exercise.home.ivanusielrj.UsielReturnInfoActivityHomework"
@@ -66,19 +98,19 @@
             android:name=".exercise.home.ivanusielrj.UsielHomeActivityHomework"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.alexisescalona.AlexisSendParameters2Activity"
+            android:name=".exercise.home.alexisescalona.exercise1.AlexisSendParameters2Activity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.alexisescalona.AlexisSendParameters1Activity"
+            android:name=".exercise.home.alexisescalona.exercise1.AlexisSendParameters1Activity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.alexisescalona.AlexisImplicitIntentActivity"
+            android:name=".exercise.home.alexisescalona.exercise1.AlexisImplicitIntentActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.alexisescalona.AlexisLifeCycleActivity"
+            android:name=".exercise.home.alexisescalona.exercise1.AlexisLifeCycleActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.alexisescalona.AlexisHomeActivity"
+            android:name=".exercise.home.alexisescalona.exercise1.AlexisHomeActivity"
             android:exported="false" />
         <activity
             android:name=".exercise.home.GlobalHomeActivity"
@@ -87,7 +119,7 @@
             <!-- Esta es la actividad principal donde haremos entregas -->
             <intent-filter>
 
-                <!-- La activity main con intent filtred debe cerrarse con la tag de cierre -->
+                <!-- La activity main con intent filter debe cerrarse con el tag de cierre -->
                 <action android:name="android.intent.action.MAIN" /> <!-- Determina que esta será la primer pantalla -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
