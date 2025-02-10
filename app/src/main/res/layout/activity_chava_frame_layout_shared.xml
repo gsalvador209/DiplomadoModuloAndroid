@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".exercise.classroom.graphiccomponent.ChavaFrameLayoutActivity">
+
+    <TextView
+        android:layout_gravity="center"
+        android:text="Texto de ejemplo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!--Con pipe se pueden mezclar los componentes
+    Actualmente este tipo de layout no se usa
+    -->
+
+    <TextView
+        android:layout_gravity="bottom|end"
+        android:text="Segundo ejemplo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="Tercer ejemplo de layout gravity"
+        android:layout_gravity="end|top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</FrameLayout>
