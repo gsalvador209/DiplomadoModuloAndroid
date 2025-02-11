@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.cvgs.androidmodule1.R
-import com.cvgs.androidmodule1.exercise.classroom.graphiccomponent.recyclerview.RecyclerViewActivity
-import com.cvgs.androidmodule1.exercise.home.salvadorchavez.exercise1.ChavaFirstHomeworkActivity
+//import com.cvgs.androidmodule1.exercise.classroom.graphiccomponent.recyclerview.RecyclerViewActivity
+//import com.cvgs.androidmodule1.exercise.home.salvadorchavez.exercise1.ChavaFirstHomeworkActivity
 
 class ChavaModuleMenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +22,7 @@ class ChavaModuleMenuActivity : AppCompatActivity() {
             insets
         }
 
-        val btnClass = findViewById<Button>(R.id.btnChavaClassroom)
+        /*val btnClass = findViewById<Button>(R.id.btnChavaClassroom)
         val btnHome = findViewById<Button>(R.id.btnChavaHome)
 
 
@@ -34,7 +34,7 @@ class ChavaModuleMenuActivity : AppCompatActivity() {
         btnClass.setOnClickListener{
             val menuHomework = Intent(this, RecyclerViewActivity::class.java)
             startActivity(menuHomework)
-        }
+        }*/
 
     }
 }

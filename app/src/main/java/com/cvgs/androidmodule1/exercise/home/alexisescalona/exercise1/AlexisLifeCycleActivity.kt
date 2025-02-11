@@ -1,4 +1,4 @@
-package com.cvgs.androidmodule1.exercise.home.alexisescalona
+package com.cvgs.androidmodule1.exercise.home.alexisescalona.exercise1
 
 import android.os.Bundle
 import android.util.Log

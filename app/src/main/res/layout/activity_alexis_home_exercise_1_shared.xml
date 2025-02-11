@@ -5,46 +5,38 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".exercise.home.alexisescalona.exercise1.AlexisSendParameters2Activity">
+    tools:context=".exercise.home.alexisescalona.exercise1.AlexisHomeActivity">
 
-    <TextView
-        android:id="@+id/tvName"
-        android:text="Name"
+    <Button
+        android:id="@+id/btnLifeCycle"
+        android:text="1) Life Cycle Activity"
+        android:backgroundTint="@android:color/black"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/tvIsMarried"
-        android:text="Married"
-        android:layout_marginVertical="20dp"
-        app:layout_constraintTop_toTopOf="@+id/tvName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/tvAge"
-        android:text="Age"
-        android:layout_marginVertical="20dp"
-        app:layout_constraintTop_toTopOf="@id/tvIsMarried"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/btnReturnInfo"
-        android:text="Return info"
-        android:backgroundTint="@android:color/black"
-        android:layout_marginBottom="40dp"
+        android:id="@+id/btnImplicitIntent"
+        android:text="2) Implicit Intent Activity"
+        android:backgroundTint="@color/black"
+        android:layout_marginVertical="50dp"
+        app:layout_constraintTop_toTopOf="@id/btnLifeCycle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnSendParameters"
+        android:text="3) Send Parameters Activity"
+        android:backgroundTint="@color/black"
+        android:layout_marginVertical="50dp"
+        app:layout_constraintTop_toTopOf="@id/btnImplicitIntent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
