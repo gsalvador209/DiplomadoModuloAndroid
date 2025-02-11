@@ -5,33 +5,26 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".exercise.home.salvadorchavez.ChavaFirstHomework">
+    tools:context=".exercise.classroom.ImplicitIntentActivity">
+
+
+    <!--Los elementos deben ir antes de cerrar la etiqueta-->
+    <!--Determina cual será el ID con @+id. Al compilar se va a crear el ID en R/-->
+    <Button
+        android:id="@+id/btnSendIntent"
+        android:text = "Enviar Intent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/btnChavaLifeCycle"
-        android:text="Ciclo de vida"
+        android:id="@+id/btnOpenURL"
+        android:text="Abrir URL"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <Button
-        android:id="@+id/btnChavaImplicitIntent"
-        android:text="Intent implícito"
-        app:layout_constraintTop_toBottomOf="@id/btnChavaLifeCycle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <Button
-        android:id="@+id/btnChavaParametros"
-        android:text="Paso de parametros"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnChavaImplicitIntent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

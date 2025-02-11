@@ -6,4 +6,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".exercise.home.salvadorchavez.ChavaModuleMenuActivity">
+
+  <!--
+    <Button
+        android:id="@+id/btnChavaClassroom"
+        android:text="Classroom activities"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btnChavaHome"
+        android:text="Home activities"
+        app:layout_constraintTop_toBottomOf="@id/btnChavaClassroom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+-->
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -75,12 +75,14 @@
             android:exported="false" />
         <activity
             android:name=".exercise.home.salvadorchavez.excercise1.ChavaImplicitIntentActivity"
+                 
             android:exported="false" />
         <activity
             android:name=".exercise.home.salvadorchavez.excercise1.ChavaFirstHomeworkActivity"
             android:exported="false" />
         <activity
             android:name=".exercise.home.salvadorchavez.excercise1.ChavaLifeCycleActivity"
+
             android:exported="false" />
         <activity
             android:name=".exercise.home.ivanusielrj.UsielReturnInfoActivityHomework"
