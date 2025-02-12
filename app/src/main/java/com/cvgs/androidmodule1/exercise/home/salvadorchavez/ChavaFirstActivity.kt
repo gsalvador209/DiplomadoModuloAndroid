@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.cvgs.androidmodule1.R
-import com.cvgs.androidmodule1.exercise.classroom.explicitintent.SecondScreenActivity
+
 import com.google.android.material.textfield.TextInputEditText
 
 class ChavaFirstActivity : AppCompatActivity() {
