@@ -1,4 +1,4 @@
-package com.cvgs.androidmodule1.exercise.home.salvadorchavez
+package com.cvgs.androidmodule1.exercise.home.salvadorchavez.Exercise1
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,8 +13,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.cvgs.androidmodule1.R
-
-import com.google.android.material.textfield.TextInputEditText
 
 class ChavaFirstActivity : AppCompatActivity() {
     private val register = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result ->

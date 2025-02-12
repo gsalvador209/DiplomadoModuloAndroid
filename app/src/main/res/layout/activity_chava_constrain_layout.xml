@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".exercise.classroom.graphiccomponent.ChavaConstrainLayoutActivity">
+
+    <!--La línea guía puede ser vertical, horizontal; central o porcentual-->
+    <!--Esta define márgenes-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glStart"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glEnd"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glPercent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/etUser"
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
+
+    <EditText
+        android:id="@+id/etUser"
+        android:hint="Usuario"
+        android:maxLines="1"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintBottom_toTopOf="@id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <!--0dp significa que se ajustará la regla-->
+    <EditText
+        android:id="@+id/etPassword"
+        android:hint="Contraseña"
+        android:maxLines="1"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/glPercent"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="Iniciar sesión"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        android:layout_marginTop="40dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="50dp"
+        android:text="¿Olvidaste tu contraseña?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

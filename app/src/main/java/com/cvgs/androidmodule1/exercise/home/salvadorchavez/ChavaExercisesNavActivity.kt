@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.cvgs.androidmodule1.R
+import com.cvgs.androidmodule1.exercise.home.salvadorchavez.Exercise1.ChavaMenuExercise1Activity
+import com.cvgs.androidmodule1.exercise.home.salvadorchavez.Exercise2.ChavaFrameLayoutActivity
+import com.cvgs.androidmodule1.exercise.home.salvadorchavez.Exercise2.ChavaMenuExercise2Activity
 
 class ChavaExercisesNavActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,8 +27,13 @@ class ChavaExercisesNavActivity : AppCompatActivity() {
         val btnTarea = findViewById<Button>(R.id.btnTarea)
 
         btnEj1.setOnClickListener{
-            val ejercicio1Intent = Intent(this, ChavaMenuActivity::class.java)
-            startActivity(ejercicio1Intent)
+            val intentEjercicio1 = Intent(this, ChavaMenuExercise1Activity::class.java)
+            startActivity(intentEjercicio1)
+        }
+
+        btnEj2.setOnClickListener{
+            val intentEjercicio2 = Intent(this, ChavaFrameLayoutActivity::class.java)
+            startActivity(intentEjercicio2)
         }
 
     }
