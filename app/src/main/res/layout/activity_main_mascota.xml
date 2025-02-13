@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#E0F7FA">
+
+    <Button
+        android:id="@+id/btnRegistrarMascota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar Mascota"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="300dp"
+        android:backgroundTint="#00796B"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/btnVerMascotas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver Mascotas Registradas"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="300dp"
+        android:backgroundTint="#00796B"
+        android:textColor="#FFFFFF" />
+
+</FrameLayout>

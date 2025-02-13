@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btnTareaRegistroApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tarea-RegistroApp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnEjercicio2Componentes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ejercicio2-Componentes"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/btnTareaRegistroApp"/>
+</RelativeLayout>
