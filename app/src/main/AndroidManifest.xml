@@ -14,50 +14,133 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidModule1"
         tools:targetApi="31">
+
         <activity
-            android:name=".exercise.home.salvadorchavez.ChavaSecondActivity"
+            android:name=".exercise.home.ivanusielrj.exercise2.usielrecyclerview.UsielRecyclerviewActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.salvadorchavez.ChavaFirstActivity"
+            android:name=".exercise.home.ivanusielrj.exercise2.UsielRelativeLayoutActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.salvadorchavez.ChavaImplicitIntentActivity"
+            android:name=".exercise.home.ivanusielrj.exercise2.UsielLinearLayoutActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.salvadorchavez.ChavaMenuActivity"
+            android:name=".exercise.home.ivanusielrj.exercise2.UsielFrameLayaoutActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.salvadorchavez.ChavaLifeCycleActivity"
+            android:name=".exercise.home.ivanusielrj.exercise2.UsielConstrainLayoutActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.ivanusielrj.UsielReturnInfoActivityHomework"
+            android:name=".exercise.home.ivanusielrj.exercise2.UsielComponentActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.ivanusielrj.UsielCallActivityHomework"
+            android:name=".exercise.home.ivanusielrj.exercise2.UsielHomeMainActivityExerciseTwo"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.ivanusielrj.UsielLinkButtonActvityHomework"
+            android:name=".exercise.home.ivanusielrj.UsielHomeMainGralActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.ivanusielrj.UsielLifeCicleActivityHomework"
+            android:name=".exercise.home.alexisescalona.homework1.AlexisRegistrationSuccessActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.ivanusielrj.UsielHomeActivityHomework"
+            android:name=".exercise.home.alexisescalona.homework1.AlexisRegistrationActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.alexisescalona.AlexisSendParameters2Activity"
+            android:name=".exercise.home.alexisescalona.exercise2.recyclerview.AlexisRecyclerViewActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.alexisescalona.AlexisSendParameters1Activity"
+            android:name=".exercise.home.alexisescalona.exercise2.AlexisComponentsActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.alexisescalona.AlexisImplicitIntentActivity"
+            android:name=".exercise.home.alexisescalona.exercise2.AlexisConstraintLayoutActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.alexisescalona.AlexisLifeCycleActivity"
+            android:name=".exercise.home.alexisescalona.exercise2.AlexisRelativeLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.exercise2.AlexisLinearLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.exercise2.AlexisFrameLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.exercise2.AlexisHomeActivity"
             android:exported="false" />
         <activity
             android:name=".exercise.home.alexisescalona.AlexisHomeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".exercise.home.salvadorchavez.Exercise2.recyclerview.ChavaRecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.salvadorchavez.Exercise2.ChavaComponentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.salvadorchavez.Exercise2.ChavaConstrainLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.salvadorchavez.Exercise2.ChavaRelativeLayout"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.salvadorchavez.Exercise2.ChavaLinearLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.salvadorchavez.Exercise2.ChavaMenuExercise2Activity"
+            android:exported="false" />
+        <activity android:name=".exercise.home.salvadorchavez.ChavaExercisesNavActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".exercise.home.salvadorchavez.ChavaModuleMenuActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".exercise.home.salvadorchavez.Exercise1.ChavaSecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.salvadorchavez.Exercise1.ChavaFirstActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.salvadorchavez.Exercise1.ChavaImplicitIntentActivity"
+
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.salvadorchavez.Exercise1.ChavaMenuExercise1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.salvadorchavez.Exercise1.ChavaLifeCycleActivity"
+
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.ivanusielrj.exercise1.UsielReturnInfoActivityHomework"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.ivanusielrj.exercise1.UsielCallActivityHomework"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.ivanusielrj.exercise1.UsielLinkButtonActvityHomework"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.ivanusielrj.exercise1.UsielLifeCicleActivityHomework"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.ivanusielrj.exercise1.UsielHomeActivityHomework"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.exercise1.AlexisSendParameters2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.exercise1.AlexisSendParameters1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.exercise1.AlexisImplicitIntentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.exercise1.AlexisLifeCycleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.alexisescalona.exercise1.AlexisHomeActivity"
             android:exported="false" />
         <activity
             android:name=".exercise.home.GlobalHomeActivity"
@@ -66,11 +149,19 @@
             <!-- Esta es la actividad principal donde haremos entregas -->
             <intent-filter>
 
-                <!-- La activity main con intent filtred debe cerrarse con la tag de cierre -->
+                <!-- La activity main con intent filter debe cerrarse con el tag de cierre -->
                 <action android:name="android.intent.action.MAIN" /> <!-- Determina que esta será la primer pantalla -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".exercise.home.MainActivityFer" />
+        <activity android:name=".exercise.home.ListaMascotasActivity" />
+        <activity android:name=".exercise.home.MainActivityMascotas" />
+        <activity android:name=".exercise.home.MainActivityTR" />
+        <activity android:name=".exercise.home.RegistrarMascotaActivity" />
+        <activity android:name=".exercise.home.RegistroExitosoActivity" />
+
     </application>
 
 </manifest>
