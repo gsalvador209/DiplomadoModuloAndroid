@@ -1,4 +1,4 @@
-package com.cvgs.androidmodule1.exercise.home.salvadorchavez.exercise1
+package com.cvgs.androidmodule1.exercise.home.salvadorchavez.Exercise1
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.cvgs.androidmodule1.R
 
-class ChavaFirstHomeworkActivity : AppCompatActivity() {
+class ChavaMenuExercise1Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

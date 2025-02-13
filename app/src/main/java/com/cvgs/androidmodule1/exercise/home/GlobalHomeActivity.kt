@@ -11,7 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.cvgs.androidmodule1.R
 import com.cvgs.androidmodule1.exercise.home.alexisescalona.AlexisHomeActivity
 import com.cvgs.androidmodule1.exercise.home.ivanusielrj.UsielHomeMainGralActivity
-import com.cvgs.androidmodule1.exercise.home.salvadorchavez.ChavaModuleMenuActivity
+import com.cvgs.androidmodule1.exercise.home.salvadorchavez.ChavaExercisesNavActivity
 
 class GlobalHomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,9 +40,10 @@ class GlobalHomeActivity : AppCompatActivity() {
         }
 
         btnOpenSalvadorHomeActivity.setOnClickListener{
-            val salvadorHomeIntent = Intent(this, ChavaModuleMenuActivity::class.java)
+            val salvadorHomeIntent = Intent(this, ChavaExercisesNavActivity::class.java)
             startActivity(salvadorHomeIntent)
         }
+
         btnOpenFernandoHomeActivity.setOnClickListener {
             Toast.makeText(this, "se le dio clic", Toast.LENGTH_SHORT).show()
             val fernandoHomeIntent = Intent(this, MainActivityFer::class.java)

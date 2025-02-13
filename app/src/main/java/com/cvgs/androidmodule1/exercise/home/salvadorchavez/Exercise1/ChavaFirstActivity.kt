@@ -1,4 +1,4 @@
-package com.cvgs.androidmodule1.exercise.home.salvadorchavez.exercise1
+package com.cvgs.androidmodule1.exercise.home.salvadorchavez.Exercise1
 
 import android.content.Intent
 import android.os.Bundle

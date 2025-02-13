@@ -5,6 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".exercise.home.salvadorchavez.exercise1.ChavaLifeCycleActivity">
+    tools:context=".exercise.home.salvadorchavez.Exercise1.ChavaLifeCycleActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

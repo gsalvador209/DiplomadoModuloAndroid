@@ -9,21 +9,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".exercise.classroom.graphiccomponent.ChavaLinearLayoutActivity">
+    tools:context=".exercise.home.salvadorchavez.Exercise2.ChavaLinearLayoutActivity"
+    android:layout_margin="15dp">
 
-    <TextView
-        android:text="Este es un texto ejemplo"
-        android:background="@android:color/holo_blue_bright"
-        android:textSize="30sp"
+
+    <ImageView
+        android:src="@drawable/chava_paisaje_1"
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content"/>
 
-    <TextView
+    <ImageView
+        android:src="@drawable/chava_paisaje_2"
         android:layout_weight="1"
-        android:background="@android:color/holo_red_dark"
-        android:textSize="30sp"
-        android:text="Este es el segundo elemento del textview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
@@ -31,19 +29,24 @@
         android:orientation="horizontal"
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
-        <TextView
-            android:background="@android:color/holo_orange_dark"
+        <ImageView
             android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:focusable="true"
+            android:src="@drawable/chava_paisaje_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"/>
 
-        <TextView
+        <ImageView
             android:layout_weight="1"
-            android:background="@android:color/holo_green_light"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:src="@drawable/chava_paisaje_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"/>
+
 
     </LinearLayout>
 </LinearLayout>

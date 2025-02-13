@@ -5,10 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".exercise.classroom.graphiccomponent.recyclerview.RecyclerViewActivity">
+    tools:context=".exercise.classroom.graphiccomponent.recyclerview.ChavaRecyclerViewActivity">
 
    <androidx.recyclerview.widget.RecyclerView
-       android:id="@+id/rvAnimal"
+       android:id="@+id/rvPost"
        android:layout_width="match_parent"
        android:layout_height="match_parent"/>
 

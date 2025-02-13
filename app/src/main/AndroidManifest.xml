@@ -69,48 +69,49 @@
         <activity
             android:name=".exercise.home.alexisescalona.AlexisHomeActivity"
             android:exported="false" />
-        <!--
+
         <activity
-            android:name=".exercise.classroom.graphiccomponent.recyclerview.RecyclerViewActivity"
+            android:name=".exercise.home.salvadorchavez.Exercise2.recyclerview.ChavaRecyclerViewActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.classroom.graphiccomponent.ChavaComponentActivity"
+            android:name=".exercise.home.salvadorchavez.Exercise2.ChavaComponentActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.classroom.graphiccomponent.ChavaConstrainLayoutActivity"
+            android:name=".exercise.home.salvadorchavez.Exercise2.ChavaConstrainLayoutActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.classroom.graphiccomponent.ChavaRelativeLayout"
+            android:name=".exercise.home.salvadorchavez.Exercise2.ChavaRelativeLayout"
             android:exported="false" />
         <activity
-            android:name=".exercise.classroom.graphiccomponent.ChavaLinearLayoutActivity"
+            android:name=".exercise.home.salvadorchavez.Exercise2.ChavaLinearLayoutActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.classroom.graphiccomponent.ChavaFrameLayoutActivity"
+            android:name=".exercise.home.salvadorchavez.Exercise2.ChavaMenuExercise2Activity"
             android:exported="false" />
-        -->
+        <activity android:name=".exercise.home.salvadorchavez.ChavaExercisesNavActivity"
+            android:exported="false"/>
+
         <activity
             android:name=".exercise.home.salvadorchavez.ChavaModuleMenuActivity"
             android:exported="false" />
-        <!--
+
         <activity
-            android:name=".exercise.home.salvadorchavez.excercise1.ChavaSecondActivity"
+            android:name=".exercise.home.salvadorchavez.Exercise1.ChavaSecondActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.salvadorchavez.excercise1.ChavaFirstActivity"
+            android:name=".exercise.home.salvadorchavez.Exercise1.ChavaFirstActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.home.salvadorchavez.excercise1.ChavaImplicitIntentActivity"
-                 
-            android:exported="false" />
-        <activity
-            android:name=".exercise.home.salvadorchavez.excercise1.ChavaFirstHomeworkActivity"
-            android:exported="false" />
-        <activity
-            android:name=".exercise.home.salvadorchavez.excercise1.ChavaLifeCycleActivity"
+            android:name=".exercise.home.salvadorchavez.Exercise1.ChavaImplicitIntentActivity"
 
             android:exported="false" />
-        -->
+        <activity
+            android:name=".exercise.home.salvadorchavez.Exercise1.ChavaMenuExercise1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.home.salvadorchavez.Exercise1.ChavaLifeCycleActivity"
+
+            android:exported="false" />
         <activity
             android:name=".exercise.home.ivanusielrj.exercise1.UsielReturnInfoActivityHomework"
             android:exported="false" />
