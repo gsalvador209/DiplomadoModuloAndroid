@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.cvgs.androidmodule1.R
+import com.cvgs.androidmodule1.exercise.home.salvadorchavez.Exercise2.recyclerview.ChavaRecyclerViewActivity
+
 
 class ChavaMenuExercise2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +25,7 @@ class ChavaMenuExercise2Activity : AppCompatActivity() {
         val btnRelative = findViewById<Button>(R.id.btnRelativeLayout)
         val btnConstraint = findViewById<Button>(R.id.btnConstraintLayout)
         val btnRecycler = findViewById<Button>(R.id.btnRecyclerView)
+        val btnComponents = findViewById<Button>(R.id.btnComponents)
 
         btnLinear.setOnClickListener{
             val intentLinear = Intent(this, ChavaLinearLayoutActivity::class.java)
@@ -34,14 +37,20 @@ class ChavaMenuExercise2Activity : AppCompatActivity() {
             startActivity(intentRelative)
         }
 
+        btnComponents.setOnClickListener{
+            val intentComponents = Intent(this, ChavaComponentActivity::class.java)
+            startActivity(intentComponents)
+        }
+
         btnConstraint.setOnClickListener{
             val intentConstraint = Intent(this, ChavaConstrainLayoutActivity::class.java)
             startActivity(intentConstraint)
         }
 
         btnRecycler.setOnClickListener{
-            val intentRecycler = Intent(this, ChavaRelativeLayout::class.java)
+            val intentRecycler = Intent(this, ChavaRecyclerViewActivity::class.java)
             startActivity(intentRecycler)
         }
+
     }
 }

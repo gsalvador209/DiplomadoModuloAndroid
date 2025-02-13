@@ -1,4 +1,4 @@
-package com.cvgs.androidmodule1.exercise.classroom.graphiccomponent.recyclerview
+package com.cvgs.androidmodule1.exercise.home.salvadorchavez.Exercise2.recyclerview
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,18 +6,19 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.cvgs.androidmodule1.R
-import org.w3c.dom.Text
 
-class AnimalAdapter(val list : List<AnimalEntity>) : RecyclerView.Adapter<AnimalAdapter.AnimalViewHolder>(){
+class PostsAdapter(val list : List<PostEntity>) : RecyclerView.Adapter<PostsAdapter.PostViewHolder>(){
     //Los adaptadores forzosamente deben heredar de RecyclerView
-    class AnimalViewHolder(view: View): RecyclerView.ViewHolder(view){
+    class PostViewHolder(view: View): RecyclerView.ViewHolder(view){
         //Requiere un View, en este caso será el item_animal.xml
-        val tvName = view.findViewById<TextView>(R.id.tvName)
-        val tvColor = view.findViewById<TextView>(R.id.tvColor)
+        val tvUserName = view.findViewById<TextView>(R.id.tvUserName)
+        val tvPostDate = view.findViewById<TextView>(R.id.tvDate)
+        val tvPostContent = view.findViewById<TextView>(R.id.tvPostContent)
 
-        fun render(animalEntity : AnimalEntity){
-            tvName.text = animalEntity.name
-            tvColor.text = animalEntity.color
+        fun render(postEntity: PostEntity){
+            tvUserName.text = postEntity.username
+            tvPostDate.text = postEntity.date
+            tvPostContent.text = postEntity.postContent
 
         }
     }
@@ -25,15 +26,15 @@ class AnimalAdapter(val list : List<AnimalEntity>) : RecyclerView.Adapter<Animal
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): AnimalViewHolder {
+    ): PostViewHolder {
         //Crea una instancia del layout con le contexto
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_animal,parent,false) //
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_post,parent,false) //
         //Otra forma de obtener el contexto es solicitarlo como parametro para la clase
-        return AnimalViewHolder(view) //Esta función regresa el ViewHoplder creado a partir del XML de item_animal.xlm
+        return PostViewHolder(view) //Esta función regresa el ViewHoplder creado a partir del XML de item_animal.xlm
     }
 
     override fun onBindViewHolder(
-        holder: AnimalViewHolder,
+        holder: PostViewHolder,
         position: Int
     ) {
         //Esta función recibe una instancia del ViewHolder, despues usa la función render

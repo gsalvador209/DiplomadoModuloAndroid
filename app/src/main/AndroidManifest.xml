@@ -35,15 +35,13 @@
         <activity
             android:name=".exercise.home.salvadorchavez.Exercise1.ChavaLifeCycleActivity"
             android:exported="false" />
-        <activity android:name=".exercise.home.salvadorchavez.Exercise2.ChavaFrameLayoutActivity"
-            android:exported="false"/>
         <activity android:name=".exercise.home.salvadorchavez.Exercise2.ChavaLinearLayoutActivity"
             android:exported="false"/>
         <activity android:name=".exercise.home.salvadorchavez.Exercise2.ChavaRelativeLayout"
             android:exported="false"/>
         <activity android:name=".exercise.home.salvadorchavez.Exercise2.ChavaConstrainLayoutActivity"
             android:exported="false"/>
-        <activity android:name=".exercise.classroom.graphiccomponent.recyclerview.ChavaRecyclerViewActivity"
+        <activity android:name=".exercise.home.salvadorchavez.Exercise2.recyclerview.ChavaRecyclerViewActivity"
             android:exported="false"/>
         <activity
             android:name=".exercise.home.ivanusielrj.UsielReturnInfoActivityHomework"

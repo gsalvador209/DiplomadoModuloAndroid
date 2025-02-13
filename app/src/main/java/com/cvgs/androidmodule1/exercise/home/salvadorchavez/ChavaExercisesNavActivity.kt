@@ -3,13 +3,13 @@ package com.cvgs.androidmodule1.exercise.home.salvadorchavez
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.cvgs.androidmodule1.R
 import com.cvgs.androidmodule1.exercise.home.salvadorchavez.Exercise1.ChavaMenuExercise1Activity
-import com.cvgs.androidmodule1.exercise.home.salvadorchavez.Exercise2.ChavaFrameLayoutActivity
 import com.cvgs.androidmodule1.exercise.home.salvadorchavez.Exercise2.ChavaMenuExercise2Activity
 
 class ChavaExercisesNavActivity : AppCompatActivity() {
@@ -32,8 +32,12 @@ class ChavaExercisesNavActivity : AppCompatActivity() {
         }
 
         btnEj2.setOnClickListener{
-            val intentEjercicio2 = Intent(this, ChavaFrameLayoutActivity::class.java)
+            val intentEjercicio2 = Intent(this, ChavaMenuExercise2Activity::class.java)
             startActivity(intentEjercicio2)
+        }
+
+        btnTarea.setOnClickListener{
+            Toast.makeText(this,"Disponible el día de entrega", Toast.LENGTH_LONG).show()
         }
 
     }
