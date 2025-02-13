@@ -3,6 +3,7 @@ package com.cvgs.androidmodule1.exercise.home
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -26,6 +27,7 @@ class GlobalHomeActivity : AppCompatActivity() {
         val btnOpenAlexisHomeActivity = findViewById<Button>(R.id.btnAlexis)
         val btnOpenUsielHomeActivity = findViewById<Button>(R.id.btnUsiel)
         val btnOpenSalvadorHomeActivity = findViewById<Button>(R.id.btnSalvador)
+        val btnOpenFernandoHomeActivity = findViewById<Button>(R.id.btnFer)
 
         btnOpenAlexisHomeActivity.setOnClickListener {
             val alexisHomeIntent = Intent(this, AlexisHomeActivity::class.java)
@@ -40,6 +42,12 @@ class GlobalHomeActivity : AppCompatActivity() {
         btnOpenSalvadorHomeActivity.setOnClickListener{
             val salvadorHomeIntent = Intent(this, ChavaExercisesNavActivity::class.java)
             startActivity(salvadorHomeIntent)
+        }
+
+        btnOpenFernandoHomeActivity.setOnClickListener {
+            Toast.makeText(this, "se le dio clic", Toast.LENGTH_SHORT).show()
+            val fernandoHomeIntent = Intent(this, MainActivityFer::class.java)
+            startActivity(fernandoHomeIntent)
         }
     }
 }
