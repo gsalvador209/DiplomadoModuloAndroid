@@ -1,4 +1,4 @@
-package com.cvgs.androidmodule1.exercise.home.ivanusielrj
+package com.cvgs.androidmodule1.exercise.home.ivanusielrj.exercise1
 
 import android.os.Bundle
 import android.view.View

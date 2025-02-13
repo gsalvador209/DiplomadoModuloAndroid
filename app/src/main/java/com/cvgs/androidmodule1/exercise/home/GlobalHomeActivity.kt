@@ -9,7 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.cvgs.androidmodule1.R
 import com.cvgs.androidmodule1.exercise.home.alexisescalona.AlexisHomeActivity
-import com.cvgs.androidmodule1.exercise.home.ivanusielrj.UsielHomeActivityHomework
+import com.cvgs.androidmodule1.exercise.home.ivanusielrj.UsielHomeMainGralActivity
 import com.cvgs.androidmodule1.exercise.home.salvadorchavez.ChavaModuleMenuActivity
 
 class GlobalHomeActivity : AppCompatActivity() {
@@ -33,7 +33,7 @@ class GlobalHomeActivity : AppCompatActivity() {
         }
 
         btnOpenUsielHomeActivity.setOnClickListener {
-            val usielisHomeIntent = Intent(this, UsielHomeActivityHomework::class.java)
+            val usielisHomeIntent = Intent(this, UsielHomeMainGralActivity::class.java)
             startActivity(usielisHomeIntent)
         }
 

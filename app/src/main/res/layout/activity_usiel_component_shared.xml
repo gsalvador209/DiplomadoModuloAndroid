@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient_purple"
+    tools:context=".exercise.home.ivanusielrj.exercise2.UsielComponentActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glStart"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glEnd"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glPercent"
+        app:layout_constraintGuide_percent=".5"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+    <ImageButton
+        android:id="@+id/ibReturn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/glStart"
+        android:layout_marginTop="20dp"
+        android:elevation="50dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/img_btn_return"
+        android:scaleType="fitCenter"
+        android:background="@color/black"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:text="Formulario de tarjeta de crédito"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        app:layout_constraintTop_toBottomOf="@id/ibReturn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"/>
+
+    <ImageView
+        android:id="@+id/ivCredit"
+        android:src="@drawable/img_creditcard"
+        app:layout_constraintStart_toEndOf="@+id/glStart"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="200dp"/>
+
+    <EditText
+        android:id="@+id/etName"
+        android:hint="¿Cuál es tu nombre?"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:backgroundTint="#FFF"
+        android:inputType="text"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ivCredit"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/etAge"
+        app:layout_constraintTop_toBottomOf="@+id/etName"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:backgroundTint="#FFF"
+        android:hint="¿Cuál es tu edad?"
+        android:inputType="number"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        android:layout_marginTop="15dp"/>
+
+    <LinearLayout
+        android:id="@+id/llRadioB"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/etAge"
+        app:layout_constraintStart_toEndOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:id="@+id/rbGroup"
+            app:layout_constraintTop_toBottomOf="@+id/etAge"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rbWomen"
+                android:text="Mujer"
+                android:textColor="#FFF"
+                android:backgroundTint="#FFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/rbMen"
+                android:text="Hombre"
+                android:textColor="#FFF"
+                android:backgroundTint="#FFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <CheckBox
+        android:id="@+id/cbCreditCard"
+        android:text="¿Tienes tarjeta de crédito?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFF"
+        android:backgroundTint="#FFF"
+        app:layout_constraintTop_toBottomOf="@+id/llRadioB"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvFrom"
+        android:text="¿Donde naciste?"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        app:layout_constraintTop_toBottomOf="@+id/cbCreditCard"
+        android:layout_marginTop="10dp"/>
+
+    <Spinner
+        android:id="@+id/spFrom"
+        android:textColor="#FFF"
+        android:backgroundTint="#FFF"
+        app:layout_constraintTop_toBottomOf="@+id/tvFrom"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:hint="Ingresa contraseña"
+        android:textAlignment="center"
+        android:inputType="textPassword"
+        android:textColor="#FFF"
+        android:backgroundTint="#FFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        app:layout_constraintTop_toBottomOf="@+id/spFrom"
+        android:layout_width="250dp"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btSubmit"
+        android:text="Enviar"
+        android:backgroundTint="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        android:layout_marginTop="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
