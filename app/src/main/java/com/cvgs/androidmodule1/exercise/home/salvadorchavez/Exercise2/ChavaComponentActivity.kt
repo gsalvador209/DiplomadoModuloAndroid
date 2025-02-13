@@ -53,7 +53,7 @@ class ChavaComponentActivity : AppCompatActivity() {
                     }
                 }
                 R.id.ibExample -> {
-                    Toast.makeText(this, "Click on imageButton", Toast.LENGTH_LONG).show()
+                    finish()
                 }
             }
 
@@ -70,7 +70,7 @@ class ChavaComponentActivity : AppCompatActivity() {
         ibExample = findViewById(R.id.ibExample)
         cbExample = findViewById(R.id.cbExample)
         btnExample = findViewById(R.id.btnExampple)
-        rgExample = findViewById(R.id.rgGender)
+        rgExample = findViewById(R.id.rgMood)
         spExample = findViewById(R.id.spExample)
 
         /***********************************************
@@ -79,7 +79,6 @@ class ChavaComponentActivity : AppCompatActivity() {
         btnExample.setOnClickListener(clickListener)
         ibExample.setOnClickListener(clickListener)
 
-        val password = etExample.text
 
         /*ibExample.setOnClickListener{
             val cbStatus = cbExample.isChecked
@@ -87,13 +86,13 @@ class ChavaComponentActivity : AppCompatActivity() {
         }*/
 
         // For checkbox listener
-        cbExample.setOnCheckedChangeListener { buttonView, isChecked ->
-            if(isChecked){
-                ivExample.visibility = View.INVISIBLE
-            }else{
-                ivExample.visibility = View.VISIBLE
-            }
-        }
+//        cbExample.setOnCheckedChangeListener { buttonView, isChecked ->
+//            if(isChecked){
+//                ivExample.visibility = View.INVISIBLE
+//            }else{
+//                ivExample.visibility = View.VISIBLE
+//            }
+//        }
 
         //Radiogroup listener
         rgExample.setOnCheckedChangeListener{ group, checkedId ->
@@ -102,7 +101,7 @@ class ChavaComponentActivity : AppCompatActivity() {
         }
 
         //Spinner definition
-        val data = arrayListOf<String>("Selecciona un país","Mexico","Argentina","Colombia","Ecuador","España")
+        val data = arrayListOf<String>("","Casa","Escuela","Trabajo","Afuera","Otro")
         val adapter = ArrayAdapter(this,android.R.layout.simple_spinner_item,data).also { //Aquí se llama un diseño de spiner, no el ID del XML
             //Also permite realizar acciones a partir de la instancia creada
             it.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -138,7 +137,7 @@ class ChavaComponentActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        tvExample.text = "Este texto se cargó en onResume"
+        tvExample.text = "Hola"
 
     }
 
@@ -148,17 +147,22 @@ class ChavaComponentActivity : AppCompatActivity() {
 
 private fun ChavaComponentActivity.getRgLabel(checkedId : Int, isFromButton : Boolean) : String {
     return when(checkedId){
-        R.id.rbWoman ->{
-            if(isFromButton) "M" else "Mujer"
+        R.id.rbHappy ->{
+            if(isFromButton) "H" else "Happy"
         }
 
-        R.id.rbMan -> {
-            if (isFromButton) "H" else "Hombre"
+        R.id.rbSad -> {
+            if (isFromButton) "S" else "Sad"
         }
 
-        R.id.rbOtherGender -> {
-            if(isFromButton) "O" else "Other"
+        R.id.rbMad -> {
+            if(isFromButton) "M" else "Mad"
         }
-        else -> "No seleccionó género"
+
+        R.id.rbBored -> {
+            if(isFromButton) "B" else "Bored"
+        }
+
+        else -> "No seleccionó un estado de ánimo"
     }
 }

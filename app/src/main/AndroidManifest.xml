@@ -43,6 +43,8 @@
             android:exported="false"/>
         <activity android:name=".exercise.home.salvadorchavez.Exercise2.recyclerview.ChavaRecyclerViewActivity"
             android:exported="false"/>
+        <activity android:name=".exercise.home.salvadorchavez.Exercise2.ChavaComponentActivity"
+            android:exported="false"/>
         <activity
             android:name=".exercise.home.ivanusielrj.UsielReturnInfoActivityHomework"
             android:exported="false" />
