@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/usiel_background_gradient"
-    tools:context=".exercise.home.ivanusielrj.UsielLinkButtonActvityHomework">
+    tools:context=".exercise.home.ivanusielrj.exercise1.UsielLinkButtonActvityHomework">
 
     <ImageButton
         android:id="@+id/btnTiktok"

@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.cvgs.androidmodule1.R
+import com.cvgs.androidmodule1.exercise.home.alexisescalona.homework1.AlexisRegistrationActivity
+import com.cvgs.androidmodule1.exercise.home.alexisescalona.exercise1.AlexisHomeActivity as HomeExercise1
+import com.cvgs.androidmodule1.exercise.home.alexisescalona.exercise2.AlexisHomeActivity as HomeExercise2
 
 class AlexisHomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,24 +23,24 @@ class AlexisHomeActivity : AppCompatActivity() {
             insets
         }
 
-        val btnOpenLifeCycleActivity = findViewById<Button>(R.id.btnLifeCycle)
+        val btnOpenExercise1HomeActivity = findViewById<Button>(R.id.btnExercise1)
 
-        btnOpenLifeCycleActivity.setOnClickListener {
-            val lifeCycleIntent = Intent(this, AlexisLifeCycleActivity::class.java)
-            startActivity(lifeCycleIntent)
+        btnOpenExercise1HomeActivity.setOnClickListener {
+            val exercise1HomeIntent = Intent(this, HomeExercise1::class.java)
+            startActivity(exercise1HomeIntent)
         }
 
-        val btnOpenImplicitIntentActivity = findViewById<Button>(R.id.btnImplicitIntent)
+        val btnOpenExercise2HomeActivity = findViewById<Button>(R.id.btnExercise2)
 
-        btnOpenImplicitIntentActivity.setOnClickListener {
-            val implicitURLIntent = Intent(this, AlexisImplicitIntentActivity::class.java)
+        btnOpenExercise2HomeActivity.setOnClickListener {
+            val implicitURLIntent = Intent(this, HomeExercise2::class.java)
             startActivity(implicitURLIntent)
         }
 
-        val btnOpenSendParametersActivity = findViewById<Button>(R.id.btnSendParameters)
+        val btnOpenHomeWork1Activity = findViewById<Button>(R.id.btnHomework1)
 
-        btnOpenSendParametersActivity.setOnClickListener {
-            val sendParametersIntent = Intent(this, AlexisSendParameters1Activity::class.java)
+        btnOpenHomeWork1Activity.setOnClickListener {
+            val sendParametersIntent = Intent(this, AlexisRegistrationActivity::class.java)
             startActivity(sendParametersIntent)
         }
     }

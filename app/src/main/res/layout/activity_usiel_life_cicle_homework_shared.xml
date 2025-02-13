@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/usiel_background_gradient"
-    tools:context=".exercise.home.ivanusielrj.UsielLifeCicleActivityHomework">
+    tools:context=".exercise.home.ivanusielrj.exercise1.UsielLifeCicleActivityHomework">
 
     <ImageButton
         android:id="@+id/btnReturn"
