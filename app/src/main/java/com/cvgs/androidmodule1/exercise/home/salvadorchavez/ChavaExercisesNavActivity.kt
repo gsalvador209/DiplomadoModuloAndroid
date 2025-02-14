@@ -11,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.cvgs.androidmodule1.R
 import com.cvgs.androidmodule1.exercise.home.salvadorchavez.Exercise1.ChavaMenuExercise1Activity
 import com.cvgs.androidmodule1.exercise.home.salvadorchavez.Exercise2.ChavaMenuExercise2Activity
+import com.cvgs.androidmodule1.homework.salvadorchavez.tarea1.ChavaLoginActivity
 
 class ChavaExercisesNavActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,7 +38,8 @@ class ChavaExercisesNavActivity : AppCompatActivity() {
         }
 
         btnTarea.setOnClickListener{
-            Toast.makeText(this,"Disponible el día de entrega", Toast.LENGTH_LONG).show()
+            val intentTarea1 = Intent(this, ChavaLoginActivity::class.java)
+            startActivity(intentTarea1)
         }
 
     }
