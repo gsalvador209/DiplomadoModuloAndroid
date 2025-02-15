@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardAnimal"
         app:layout_constraintTop_toTopOf="parent"
 
         app:cardCornerRadius="15dp"
@@ -23,7 +24,8 @@
 
             <ImageView
                 android:id="@+id/ivAnimal1"
-                android:src="@mipmap/ic_launcher"
+                android:src="@drawable/img_rectangular_android"
+                android:scaleType="centerCrop"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_width="100dp"
@@ -31,9 +33,12 @@
 
             <TextView
                 android:id="@+id/tvName"
+                style="@style/RedTextStyle"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toEndOf="@id/ivAnimal1"
                 app:layout_constraintEnd_toEndOf="parent"
+
+                android:text="@string/label_textview"
 
                 android:layout_marginTop="15dp"
                 android:paddingHorizontal="10dp"
