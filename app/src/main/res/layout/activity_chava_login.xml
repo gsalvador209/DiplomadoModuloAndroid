@@ -42,6 +42,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
+    <ImageView
+        android:src="@drawable/chava_gradient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/glDiv"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
     <TextView
         android:id="@+id/tvLogin"
         android:text="Login"
@@ -61,7 +70,7 @@
         app:layout_constraintEnd_toEndOf="@id/glEnd"
         app:layout_constraintTop_toBottomOf="@id/tvLogin"
 
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:padding="10dp"
 
         android:layout_width="300dp"
