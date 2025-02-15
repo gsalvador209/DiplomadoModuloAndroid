@@ -3,20 +3,41 @@ package com.cvgs.androidmodule1.homework.salvadorchavez.tarea1
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.text.Editable
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.TextPaint
+import android.text.TextWatcher
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.view.View
+import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.cvgs.androidmodule1.R
+import com.cvgs.androidmodule1.homework.salvadorchavez.tarea1.utils.isNotFilled
+import com.cvgs.androidmodule1.homework.salvadorchavez.tarea1.utils.markAsInvalid
+import com.cvgs.androidmodule1.homework.salvadorchavez.tarea1.utils.resetOnTyping
+import org.w3c.dom.Text
 
 class ChavaLoginActivity : AppCompatActivity() {
+    lateinit var etEmail: EditText
+    lateinit var etPassword: EditText
+    lateinit var btnLogin : Button
+    lateinit var register: ActivityResultLauncher<Intent>
+    var registredEmail: String? = null
+    var registredPassword: String? = null
+    var registredGender: String? = null
+    var registredName: String? = null
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -26,13 +47,35 @@ class ChavaLoginActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val textView = findViewById<TextView>(R.id.tvSignUp)
-        val spannableString = SpannableString("¿No tienes cuenta? Crea una")
 
+        /********************************
+         *          Variables
+         * **********************************/
+        val textView = findViewById<TextView>(R.id.tvSignUp)
+        val spannableString = SpannableString("¿No tienes cuenta? Crear cuenta") //Para poder crear cuenta en texto
+        register = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result ->
+            if (result.resultCode == RESULT_OK){
+                registredEmail = result.data?.getStringExtra("EXTRA_EMAIL")
+                registredPassword = result.data?.getStringExtra("EXTRA_PASSWORD")
+                registredGender = result.data?.getStringExtra("EXTRA_SEX")
+                registredName = result.data?.getStringExtra("EXTRA_NAME")
+                //Toast.makeText(this,"isCorrect: $isCorrect", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        /************lateinit var***********/
+        etEmail = findViewById(R.id.etEmail)
+        etPassword = findViewById(R.id.etPassword)
+        btnLogin = findViewById(R.id.btnSignIn)
+
+
+        /********************************************
+                    Span para Intent de sign up
+         **********************************************/
         val clickableSpan = object : ClickableSpan() {
             override fun onClick(widget: View) {
                 val intent = Intent(widget.context, ChavaSignUpActivity::class.java)
-                widget.context.startActivity(intent)
+                register.launch(intent)
             }
 
             override fun updateDrawState(ds: TextPaint) {
@@ -42,8 +85,56 @@ class ChavaLoginActivity : AppCompatActivity() {
             }
         }
 
-        spannableString.setSpan(clickableSpan, 19, 27, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        spannableString.setSpan(clickableSpan, 19, 31, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         textView.text = spannableString
         textView.movementMethod = LinkMovementMethod.getInstance()
+
+        /*************************************
+                        Listeners
+         ************************************/
+
+        etEmail.resetOnTyping()
+        etPassword.resetOnTyping()
+
+
+
+        btnLogin.setOnClickListener{
+            var isValid = true
+            if (etEmail.isNotFilled()){
+                etEmail.markAsInvalid()
+                isValid = false
+            }
+            if(etPassword.isNotFilled()){
+                etPassword.markAsInvalid()
+                isValid = false
+            }
+
+            if(isValid){
+                //Inicia sesion
+                if (etPassword.text.toString() == registredPassword &&
+                    etEmail.text.toString() == registredEmail){
+                    if(registredGender == "Hombre"){
+                        Toast.makeText(this, "Bienvenido, $registredName",Toast.LENGTH_SHORT).show()
+                    }else if(registredGender == "Mujer"){
+                        Toast.makeText(this, "Bienvenida, $registredName",Toast.LENGTH_SHORT).show()
+                    }else if(registredGender == "Otro"){
+                        Toast.makeText(this, "Bienvenide, $registredName",Toast.LENGTH_SHORT).show()
+                    }
+
+                }else{
+                    Toast.makeText(this, "Correo o contraseña equivocados o no registrados",Toast.LENGTH_SHORT).show()
+                }
+
+
+            }else{
+                Toast.makeText(this,"Ingresa los datos faltantes", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        etEmail.setText("")
+        etPassword.setText("")
     }
 }
