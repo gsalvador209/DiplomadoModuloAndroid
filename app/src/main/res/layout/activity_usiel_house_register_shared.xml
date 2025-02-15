@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient_pink"
+    tools:context=".exercise.home.ivanusielrj.homework1.UsielHouseRegisterActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glStart"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glEnd"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBottom"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glTop"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glPercent"
+        app:layout_constraintGuide_percent=".40"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+    <ImageButton
+        android:id="@+id/ibReturn"
+        app:layout_constraintEnd_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        android:elevation="70dp"
+        android:src="@drawable/img_backhome"
+        android:scaleType="fitCenter"
+        android:background="@drawable/img_backhome"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <TextView
+        android:id="@+id/tvRegister"
+        android:text="Registro"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="60sp"
+        android:textColor="#f4f4f4"
+        android:shadowColor="#cb6ce6"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/pacificoregular"/>
+
+    <EditText
+        android:id="@+id/etName"
+        android:hint="¿Cuál es tu nombre?"
+        android:textAlignment="center"
+        android:textColor="#fe9898"
+        android:backgroundTint="#cb6ce6"
+        android:inputType="text"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegister"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        android:layout_marginTop="15dp"
+        android:textColorHint="#cb6ce6"
+        android:fontFamily="@font/pacificoregular"/>
+
+    <EditText
+        android:id="@+id/etPrice"
+        app:layout_constraintTop_toBottomOf="@+id/etName"
+        android:textAlignment="center"
+        android:textColor="#fe9898"
+        android:backgroundTint="#cb6ce6"
+        android:hint="¿Cuál es el precio de tu casa?"
+        android:inputType="number"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        android:layout_marginTop="15dp"
+        android:textColorHint="#cb6ce6"
+        android:fontFamily="@font/pacificoregular"/>
+
+    <RadioGroup
+        android:id="@+id/rbGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPrice"
+        app:layout_constraintStart_toEndOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbSale"
+            android:text="Venta"
+            android:textColor="#fe9898"
+            android:backgroundTint="#916C62"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pacificoregular"/>
+        <RadioButton
+            android:id="@+id/rbRent"
+            android:text="Renta"
+            android:textColor="#fe9898"
+            android:backgroundTint="#916C62"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pacificoregular"/>
+    </RadioGroup>
+
+
+    <CheckBox
+        android:id="@+id/cbCreditCard"
+        android:text="¿Aceptas algún crédito?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fe9898"
+        android:backgroundTint="#916C62"
+        app:layout_constraintTop_toBottomOf="@+id/rbGroup"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/pacificoregular"/>
+
+    <TextView
+        android:id="@+id/tvFrom"
+        android:text="¿Donde se ubica tu propiedad?"
+        android:textColor="#fe9898"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        app:layout_constraintTop_toBottomOf="@+id/cbCreditCard"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/pacificoregular"/>
+    <Spinner
+        android:id="@+id/spFrom"
+        android:textColor="#916C62"
+        android:backgroundTint="#916C62"
+        app:layout_constraintTop_toBottomOf="@+id/tvFrom"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pacificoregular"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:hint="Ingresa contraseña"
+        android:textAlignment="center"
+        android:inputType="textPassword"
+        android:textColor="#fe9898"
+        android:backgroundTint="#fe9898"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        app:layout_constraintTop_toBottomOf="@+id/spFrom"
+        android:layout_width="250dp"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#cb6ce6"
+        android:fontFamily="@font/pacificoregular"/>
+
+    <Button
+        android:id="@+id/btSubmit"
+        android:text="Enviar"
+        android:backgroundTint="#cb6ce6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/pacificoregular"/>
+
+
+    <ImageView
+        android:id="@+id/ivBannerHome"
+        android:src="@drawable/img_sillon_footer"
+        app:layout_constraintTop_toBottomOf="@id/glPercent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

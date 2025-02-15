@@ -10,8 +10,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.cvgs.androidmodule1.R
+import com.cvgs.androidmodule1.exercise.home.GlobalHomeActivity
 import com.cvgs.androidmodule1.exercise.home.ivanusielrj.exercise1.UsielHomeActivityHomework
 import com.cvgs.androidmodule1.exercise.home.ivanusielrj.exercise2.UsielHomeMainActivityExerciseTwo
+import com.cvgs.androidmodule1.exercise.home.ivanusielrj.homework1.UsielHomeHouseRegisterActivity
 
 class UsielHomeMainGralActivity : AppCompatActivity() {
 
@@ -55,8 +57,15 @@ class UsielHomeMainGralActivity : AppCompatActivity() {
             startActivity(secondScreen)
         }
 
+        btnHomework.setOnClickListener {
+            val secondScreen = Intent(this, UsielHomeHouseRegisterActivity::class.java).apply {
+            }
+            startActivity(secondScreen)
+        }
+
         ibReturn.setOnClickListener {
-            finish()
+            val secondScreen = Intent(this, GlobalHomeActivity::class.java)
+            startActivity(secondScreen)
         }
     }
 }
