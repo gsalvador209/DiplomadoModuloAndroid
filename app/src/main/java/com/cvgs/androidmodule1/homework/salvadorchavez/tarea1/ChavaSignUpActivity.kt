@@ -84,9 +84,9 @@ class ChavaSignUpActivity : AppCompatActivity() {
 
 
             if(!isValid){
-                Toast.makeText(this,"Llena los campos faltantes", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,getString(R.string.signup_missing_fields), Toast.LENGTH_SHORT).show()//Listo en  string.xml
             }else if (etPassword.text.toString() != etPassword2.text.toString()){
-                Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.signup_password_mismatch), Toast.LENGTH_SHORT).show()//listo en string.xml
                 etPassword.setText("")
                 etPassword2.setText("")
                 etPassword.markAsInvalid()

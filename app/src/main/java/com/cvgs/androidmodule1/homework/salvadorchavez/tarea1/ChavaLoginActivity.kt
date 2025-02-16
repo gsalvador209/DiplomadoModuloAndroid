@@ -52,7 +52,7 @@ class ChavaLoginActivity : AppCompatActivity() {
          *          Variables
          * **********************************/
         val textView = findViewById<TextView>(R.id.tvSignUp)
-        val spannableString = SpannableString("¿No tienes cuenta? Crear cuenta") //Para poder crear cuenta en texto
+        val spannableString = SpannableString(getString(R.string.login_no_account)) //Listo en string.xml
         register = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result ->
             if (result.resultCode == RESULT_OK){
                 registredEmail = result.data?.getStringExtra("EXTRA_EMAIL")
@@ -114,20 +114,27 @@ class ChavaLoginActivity : AppCompatActivity() {
                 if (etPassword.text.toString() == registredPassword &&
                     etEmail.text.toString() == registredEmail){
                     if(registredGender == "Hombre"){
-                        Toast.makeText(this, "Bienvenido, $registredName",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this,
+                            String.format(getString(R.string.login_welcome_male), registredName),
+                            Toast.LENGTH_SHORT).show() //listo en string.xml
                     }else if(registredGender == "Mujer"){
-                        Toast.makeText(this, "Bienvenida, $registredName",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this,
+                            String.format(getString(R.string.login_welcome_female), registredName),
+                            Toast.LENGTH_SHORT).show() // listo en string.xml
+
                     }else if(registredGender == "Otro"){
-                        Toast.makeText(this, "Bienvenide, $registredName",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this,
+                            String.format(getString(R.string.login_welcome_other), registredName),
+                            Toast.LENGTH_SHORT).show() //listo en string.xml
                     }
 
                 }else{
-                    Toast.makeText(this, "Correo o contraseña equivocados o no registrados",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.login_error_credentials),Toast.LENGTH_SHORT).show() //Listo en string.xml
                 }
 
 
             }else{
-                Toast.makeText(this,"Ingresa los datos faltantes", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,getString(R.string.login_missing_fields), Toast.LENGTH_SHORT).show() //Listo en string.xml
             }
         }
     }
