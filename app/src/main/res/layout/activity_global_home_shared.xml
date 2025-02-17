@@ -7,6 +7,25 @@
     android:layout_height="match_parent"
     tools:context=".exercise.home.GlobalHomeActivity">
 
+    <ImageView
+        android:id="@+id/ivMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnFinalExercise"
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
+
+    <Button
+        android:id="@+id/btnFinalExercise"
+        android:text="Final Exercise"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
     <!--Cambiar parent por algun layout-->
     <Button
         android:id="@+id/btnSalvador"

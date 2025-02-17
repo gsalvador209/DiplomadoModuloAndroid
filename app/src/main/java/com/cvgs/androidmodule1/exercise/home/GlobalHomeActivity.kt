@@ -3,6 +3,7 @@ package com.cvgs.androidmodule1.exercise.home
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,8 @@ import com.cvgs.androidmodule1.R
 import com.cvgs.androidmodule1.exercise.home.alexisescalona.AlexisHomeActivity
 import com.cvgs.androidmodule1.exercise.home.ivanusielrj.UsielHomeMainGralActivity
 import com.cvgs.androidmodule1.exercise.home.salvadorchavez.ChavaExercisesNavActivity
+import com.cvgs.androidmodule1.finalexercise.FinalExerciseMainActivity
+import com.squareup.picasso.Picasso
 
 class GlobalHomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,10 +27,23 @@ class GlobalHomeActivity : AppCompatActivity() {
             insets
         }
 
+        val ivMain = findViewById<ImageView>(R.id.ivMain)
+        val btnOpenFinalExerciseActivity = findViewById<Button>(R.id.btnFinalExercise)
         val btnOpenAlexisHomeActivity = findViewById<Button>(R.id.btnAlexis)
         val btnOpenUsielHomeActivity = findViewById<Button>(R.id.btnUsiel)
         val btnOpenSalvadorHomeActivity = findViewById<Button>(R.id.btnSalvador)
         val btnOpenFernandoHomeActivity = findViewById<Button>(R.id.btnFer)
+
+        Picasso.get()
+            .load("https://i.postimg.cc/3RHn9LgQ/Equipo-4.png")
+            .placeholder(R.drawable.img_btn_home)
+            .error(R.drawable.ic_android_black_24dp)
+            .into(ivMain);
+
+        btnOpenFinalExerciseActivity.setOnClickListener {
+            val finalExerciseIntent = Intent(this, FinalExerciseMainActivity::class.java)
+            startActivity(finalExerciseIntent)
+        }
 
         btnOpenAlexisHomeActivity.setOnClickListener {
             val alexisHomeIntent = Intent(this, AlexisHomeActivity::class.java)
