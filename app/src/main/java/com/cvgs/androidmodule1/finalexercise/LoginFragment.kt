@@ -25,12 +25,12 @@ import com.cvgs.androidmodule1.homework.salvadorchavez.tarea1.utils.markAsInvali
 import com.cvgs.androidmodule1.homework.salvadorchavez.tarea1.utils.resetOnTyping
 
 class LoginFragment : Fragment() {
-    private lateinit var binding : FragmentLoginBinding
+    private lateinit var binding: FragmentLoginBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -38,15 +38,10 @@ class LoginFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        /********************************
-         *          Variables
-         * **********************************/
-        val spannableString = SpannableString("¿No tienes cuenta? Crear cuenta") //Para poder crear cuenta en texto
-        //val registeredUser = arguments?.getSerializable("EXTRA_USER") as? UserEntity
+
+        val spannableString = SpannableString(getString(R.string.no_account))
         val registeredUser = arguments?.getSerializable("EXTRA_USER", UserEntity::class.java)
-        /********************************************
-        Span para Fragment de sign up
-         **********************************************/
+
         val clickableSpan = object : ClickableSpan() {
             override fun onClick(widget: View) {
                 parentFragmentManager.beginTransaction()
@@ -58,7 +53,7 @@ class LoginFragment : Fragment() {
             override fun updateDrawState(ds: TextPaint) {
                 super.updateDrawState(ds)
                 ds.isUnderlineText = true
-                ds.color = context!!.getThemeColor(com.google.android.material.R.attr.colorSecondary)
+                ds.color = Color.MAGENTA
             }
         }
 
@@ -66,92 +61,62 @@ class LoginFragment : Fragment() {
         binding.tvSignUp.text = spannableString
         binding.tvSignUp.movementMethod = LinkMovementMethod.getInstance()
 
-        binding.etEmail.resetOnTyping()
-        binding.etPassword.resetOnTyping()
+        binding.etEmail.hint = getString(R.string.email_hint)
+        binding.etPassword.hint = getString(R.string.password_hint)
+        binding.btnSignIn.text = getString(R.string.sign_in)
 
-        binding.btnSignIn.setOnClickListener{
+        binding.btnSignIn.setOnClickListener {
             var isValid = true
-            if (binding.etEmail.isNotFilled()){
+            if (binding.etEmail.isNotFilled()) {
                 binding.etEmail.markAsInvalid()
                 isValid = false
             }
-            if(binding.etPassword.isNotFilled()){
+            if (binding.etPassword.isNotFilled()) {
                 binding.etPassword.markAsInvalid()
                 isValid = false
             }
 
-            if(isValid){
-                //Inicia sesion
-                if (binding.etPassword.text.toString() == registeredUser?.password  &&
-                    binding.etEmail.text.toString() == registeredUser?.email){
-                    if(registeredUser?.gender == "Hombre"){
-                        //Toast.makeText(requireContext(), "Bienvenido, ${registeredUser?.name}", Toast.LENGTH_SHORT).show()
-                        val message = """${registeredUser?.name}""".trimIndent()
-                        val alertDialog = AlertDialog.Builder(requireContext())
-                            .setTitle("Bienvenido")
-                            .setMessage(message)
-                            .setPositiveButton("Ingresar") { dialog, which ->
-                                val intent = Intent(requireContext(), StartUpActivity::class.java).apply {
-                                    putExtra("EXTRA_USER", registeredUser)
-                                }
-                                startActivity(intent)
-                            }
-                            .create()
-                        alertDialog.show()
+            if (isValid) {
+                if (binding.etPassword.text.toString() == registeredUser?.password &&
+                    binding.etEmail.text.toString() == registeredUser?.email) {
 
-                    }else if(registeredUser?.gender == "Mujer"){
-                        //Toast.makeText(requireContext(), "Bienvenida, ${registeredUser?.name}", Toast.LENGTH_SHORT).show()
-                        val message = """${registeredUser?.name}""".trimIndent()
-                        val alertDialog = AlertDialog.Builder(requireContext())
-                            .setTitle("Bienvenida")
-                            .setMessage(message)
-                            .setPositiveButton("Ingresar") { dialog, which ->
-                                val intent = Intent(requireContext(), StartUpActivity::class.java).apply {
-                                    putExtra("EXTRA_USER", registeredUser)
-                                }
-                                startActivity(intent)
-                            }
-                            .create()
-                        alertDialog.show()
-                    }else if(registeredUser?.gender == "Otro"){
-                        //Toast.makeText(requireContext(), "Bienvenide, ${registeredUser?.name}", Toast.LENGTH_SHORT).show()
-                        val message = """${registeredUser?.name}""".trimIndent()
-                        val alertDialog = AlertDialog.Builder(requireContext())
-                            .setTitle("Bienvenide")
-                            .setMessage(message)
-                            .setPositiveButton("Ingresar") { dialog, which ->
-                                val intent = Intent(requireContext(), StartUpActivity::class.java).apply {
-                                    putExtra("EXTRA_USER", registeredUser)
-                                }
-                                startActivity(intent)
-                            }
-                            .create()
-                        alertDialog.show()
-
+                    val title = when (registeredUser?.gender) {
+                        getString(R.string.gender_male) -> getString(R.string.welcome_male)
+                        getString(R.string.gender_female) -> getString(R.string.welcome_female)
+                        getString(R.string.gender_other) -> getString(R.string.welcome_other)
+                        else -> getString(R.string.login_error)
                     }
 
-                }else{
-                    //Toast.makeText(requireContext(), "Correo o contraseña equivocados o no registrados", Toast.LENGTH_SHORT).show()
-                    val message = """Correo o contraseña equivocados o no registrados""".trimIndent()
+                    val message = registeredUser?.name ?: getString(R.string.login_error)
+
+                    val alertDialog = AlertDialog.Builder(requireContext())
+                        .setTitle(title)
+                        .setMessage(message)
+                        .setPositiveButton(R.string.btn_send) { _, _ ->
+                            val intent = Intent(requireContext(), StartUpActivity::class.java).apply {
+                                putExtra("EXTRA_USER", registeredUser)
+                            }
+                            startActivity(intent)
+                        }
+                        .create()
+                    alertDialog.show()
+
+                } else {
                     val alertDialog = AlertDialog.Builder(requireContext())
                         .setTitle("Ups!")
-                        .setMessage(message)
-                        .setPositiveButton("OK") { dialog, which -> }
+                        .setMessage(getString(R.string.login_error))
+                        .setPositiveButton("OK", null)
                         .create()
                     alertDialog.show()
                 }
 
-
-            }else{
-                //Toast.makeText(requireContext(),"Ingresa los datos faltantes", Toast.LENGTH_SHORT).show()
-                val message = """Ingresa los datos faltantes""".trimIndent()
+            } else {
                 val alertDialog = AlertDialog.Builder(requireContext())
                     .setTitle("Ups!")
-                    .setMessage(message)
-                    .setPositiveButton("OK") { dialog, which -> }
+                    .setMessage(getString(R.string.missing_data))
+                    .setPositiveButton("OK", null)
                     .create()
                 alertDialog.show()
-
             }
         }
     }
@@ -167,3 +132,4 @@ class LoginFragment : Fragment() {
         return typedValue.data
     }
 }
+

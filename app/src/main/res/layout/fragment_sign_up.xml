@@ -53,8 +53,7 @@
 
     <TextView
         android:id="@+id/tvLogin"
-        android:text="Sign up"
-
+        android:text="@string/sign_up"
         app:layout_constraintTop_toBottomOf="@id/glDiv"
         app:layout_constraintStart_toStartOf="@id/glStart"
 
@@ -62,8 +61,7 @@
 
     <EditText
         android:id="@+id/etName"
-        android:hint="Nombres"
-
+        android:hint="@string/name_hint"
 
         app:layout_constraintStart_toStartOf="@id/glStart"
         app:layout_constraintEnd_toEndOf="@id/glEnd"
@@ -74,7 +72,8 @@
 
     <EditText
         android:id="@+id/etLastName"
-        android:hint="Apellidos"
+        android:hint="@string/last_name_hint"
+        android:background="@drawable/rounded_edittext"
 
         app:layout_constraintStart_toStartOf="@id/glStart"
         app:layout_constraintEnd_toEndOf="@id/glEnd"
@@ -85,7 +84,7 @@
 
     <EditText
         android:id="@+id/etEmail"
-        android:hint="Correo"
+        android:hint="@string/email_hint"
         android:inputType="textEmailAddress"
         android:background="@drawable/rounded_edittext"
 
@@ -98,7 +97,7 @@
 
     <EditText
         android:id="@+id/etPassword"
-        android:hint="Contraseña"
+        android:hint="@string/password_hint"
         android:background="@drawable/rounded_edittext"
         android:inputType="textPassword"
 
@@ -112,7 +111,7 @@
 
     <EditText
         android:id="@+id/etPassword2"
-        android:hint="Repetir contraseña"
+        android:hint="@string/repeat_password_hint"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="@id/glStart"
         app:layout_constraintEnd_toEndOf="@id/glEnd"
@@ -125,7 +124,6 @@
     <RadioGroup
         android:id="@+id/rgSex"
         android:orientation="horizontal"
-
         app:layout_constraintStart_toStartOf="@id/glStart"
         app:layout_constraintEnd_toEndOf="@id/glEnd"
         app:layout_constraintTop_toBottomOf="@id/etPassword2"
@@ -136,17 +134,17 @@
         android:layout_height="40dp">
 
         <RadioButton
-            android:text="Hombre"
+            android:text="@string/gender_male"
             android:layout_width="100dp"
             android:layout_height="40dp"/>
 
         <RadioButton
-            android:text="Mujer"
+            android:text="@string/gender_female"
             android:layout_width="100dp"
             android:layout_height="40dp"/>
 
         <RadioButton
-            android:text="Otro"
+            android:text="@string/gender_other"
             android:layout_width="100dp"
             android:layout_height="40dp"/>
 
@@ -154,7 +152,7 @@
 
     <Button
         android:id="@+id/btnSignIn"
-        android:text="Crear cuenta"
+       android:text="@string/create_account"
         android:background="@drawable/rounded_edittext"
         app:layout_constraintStart_toStartOf="@id/glStart"
         app:layout_constraintEnd_toEndOf="@id/glEnd"
