@@ -102,9 +102,9 @@ class LoginFragment : Fragment() {
 //                    alertDialog.show()
                     val homeIntent = Intent(requireContext(), StartUpActivity::class.java).apply{
                         putExtra("EXTRA_USER",registeredUser)
-
                     }
                     startActivity(homeIntent)
+                    requireActivity().finish()
 
                 } else {
                     val alertDialog = AlertDialog.Builder(requireContext())
