@@ -53,7 +53,7 @@ class LoginFragment : Fragment() {
             override fun updateDrawState(ds: TextPaint) {
                 super.updateDrawState(ds)
                 ds.isUnderlineText = true
-                ds.color = Color.MAGENTA
+                ds.color = context!!.getThemeColor(com.google.android.material.R.attr.colorPrimary)
             }
         }
 
@@ -89,17 +89,22 @@ class LoginFragment : Fragment() {
 
                     val message = registeredUser?.name ?: getString(R.string.login_error)
 
-                    val alertDialog = AlertDialog.Builder(requireContext())
-                        .setTitle(title)
-                        .setMessage(message)
-                        .setPositiveButton(R.string.btn_send) { _, _ ->
-                            val intent = Intent(requireContext(), StartUpActivity::class.java).apply {
-                                putExtra("EXTRA_USER", registeredUser)
-                            }
-                            startActivity(intent)
-                        }
-                        .create()
-                    alertDialog.show()
+//                    val alertDialog = AlertDialog.Builder(requireContext())
+//                        .setTitle(title)
+//                        .setMessage(message)
+//                        .setPositiveButton(R.string.btn_send) { _, _ ->
+//                            val intent = Intent(requireContext(), StartUpActivity::class.java).apply {
+//                                putExtra("EXTRA_USER", registeredUser)
+//                            }
+//                            startActivity(intent)
+//                        }
+//                        .create()
+//                    alertDialog.show()
+                    val homeIntent = Intent(requireContext(), StartUpActivity::class.java).apply{
+                        putExtra("EXTRA_USER",registeredUser)
+
+                    }
+                    startActivity(homeIntent)
 
                 } else {
                     val alertDialog = AlertDialog.Builder(requireContext())

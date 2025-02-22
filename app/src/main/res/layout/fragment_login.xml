@@ -43,6 +43,7 @@
 
     <FrameLayout
         android:background="@drawable/backgorund_gradient_primary_secondary"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/glDiv"
@@ -71,7 +72,6 @@
         android:id="@+id/etPassword"
         android:hint="@string/password_hint"
         android:background="@drawable/rounded_edittext"
-        android:hint="Contraseña"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="@id/glStart"
         app:layout_constraintEnd_toEndOf="@id/glEnd"
