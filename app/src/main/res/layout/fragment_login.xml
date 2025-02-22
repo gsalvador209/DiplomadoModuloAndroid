@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".finalexercise.LoginFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glStart"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glEnd"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glTop"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBottom"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glDiv"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:background="@drawable/backgorund_gradient_primary_secondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/glDiv"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:text="Login"
+        app:layout_constraintTop_toBottomOf="@id/glDiv"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        style="@style/Heading1"/>
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:hint="Email"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintTop_toBottomOf="@id/tvLogin"
+        android:layout_marginTop="60dp"
+        style="@style/RoundedLayout"
+        />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
+        android:layout_marginTop="20dp"
+        style="@style/RoundedLayout"/>
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:text="Iniciar sesión"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        android:layout_marginTop="20dp"
+        style="@style/RoundedButton"
+        />
+
+    <TextView
+        android:id="@+id/tvSignUp"
+        android:text="¿No tienes cuenta? Crea una"
+        android:textSize="17sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@id/glBottom"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
