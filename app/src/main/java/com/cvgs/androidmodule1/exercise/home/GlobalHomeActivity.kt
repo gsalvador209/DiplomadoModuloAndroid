@@ -43,6 +43,7 @@ class GlobalHomeActivity : AppCompatActivity() {
         btnOpenFinalExerciseActivity.setOnClickListener {
             val finalExerciseIntent = Intent(this, FinalExerciseMainActivity::class.java)
             startActivity(finalExerciseIntent)
+            finish()
         }
 
         btnOpenAlexisHomeActivity.setOnClickListener {

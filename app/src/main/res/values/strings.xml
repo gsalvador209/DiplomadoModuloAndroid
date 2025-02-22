@@ -1,5 +1,29 @@
 <resources>
-    <string name="app_name">AndroidModule1</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">Equipo 4</string>
+    <string name="login_title">Login</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="sign_in">Iniciar sesión</string>
+    <string name="no_account">¿No tienes cuenta? Crear cuenta</string>
+    <string name="sign_up">Sign up</string>
+    <string name="name_hint">Nombre(s)</string>
+    <string name="last_name_hint">Apellido(s)</string>
+    <string name="repeat_password_hint">Repite Contraseña</string>
+    <string name="create_account">Crear cuenta</string>
+    <string name="gender_male">Hombre</string>
+    <string name="gender_female">Mujer</string>
+    <string name="gender_other">Otro</string>
+    <string name="welcome_male">Bienvenido</string>
+    <string name="welcome_female">Bienvenida</string>
+    <string name="welcome_other">Bienvenide</string>
+    <string name="login_error">Correo o contraseña equivocados o no registrados</string>
+    <string name="missing_data">Ingresa los datos faltantes</string>
+    <string name="password_mismatch">Las contraseñas no coinciden</string>
+    <string name="incomplete_data">Favor de llenar los datos faltantes</string>
+    <string name="error_data">Error al introducir los datos</string>
+    <string name="user_info_title">Los datos que ingresaste son:</string>
+    <string name="btn_send">Enviar</string>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="start_up">Home</string>
+    <string name="btn_home">Inicio</string>
 </resources>

@@ -46,4 +46,6 @@ class StartUpActivity : AppCompatActivity() {
         }
     }
 
+
+
 }
