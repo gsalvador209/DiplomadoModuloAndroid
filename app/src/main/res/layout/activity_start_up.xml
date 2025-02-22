@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,138 +9,135 @@
 
   <androidx.constraintlayout.widget.Guideline
       android:id="@+id/glStart"
-      android:orientation="vertical"
-      app:layout_constraintGuide_begin="20dp"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"/>
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      app:layout_constraintGuide_begin="20dp" />
 
   <androidx.constraintlayout.widget.Guideline
       android:id="@+id/glEnd"
-      android:orientation="vertical"
-      app:layout_constraintGuide_end="20dp"
       android:layout_width="0dp"
-      android:layout_height="match_parent"/>
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      app:layout_constraintGuide_end="20dp" />
 
   <androidx.constraintlayout.widget.Guideline
       android:id="@+id/glTop"
-      android:orientation="horizontal"
-      app:layout_constraintGuide_begin="20dp"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"/>
+      android:layout_height="match_parent"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_begin="20dp" />
 
   <androidx.constraintlayout.widget.Guideline
       android:id="@+id/glBottom"
-      android:orientation="horizontal"
-      app:layout_constraintGuide_end="20dp"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"/>
+      android:layout_height="match_parent"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_end="20dp" />
 
   <androidx.constraintlayout.widget.Guideline
       android:id="@+id/glDiv"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
       android:orientation="horizontal"
-      app:layout_constraintGuide_percent="0.25"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"/>
+      app:layout_constraintGuide_percent="0.25" />
 
-  <ImageView
-      android:src="@drawable/chava_gradient"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintBottom_toBottomOf="@id/glDiv"
-      android:scaleType="centerCrop"
+  <FrameLayout
       android:layout_width="match_parent"
-      android:layout_height="0dp"/>
+      android:layout_height="0dp"
+      android:background="@drawable/backgorund_gradient_primary_secondary"
+      android:scaleType="centerCrop"
+      app:layout_constraintBottom_toBottomOf="@id/glDiv"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
 
 
   <TextView
       android:id="@+id/tvLogin"
-      android:text="Start up"
-      android:textSize="50sp"
-      android:textStyle="bold"
-      app:layout_constraintTop_toBottomOf="@id/glDiv"
-      app:layout_constraintStart_toStartOf="@id/glStart"
+      style="@style/Heading1"
       android:layout_width="wrap_content"
-      android:layout_height="wrap_content"/>
+      android:layout_height="wrap_content"
+      android:text="Start up"
+      app:layout_constraintStart_toStartOf="@id/glStart"
+      app:layout_constraintTop_toBottomOf="@id/glDiv" />
 
   <TextView
       android:id="@+id/tvName"
-      android:textSize="20dp"
-      app:layout_constraintStart_toStartOf="@id/glStart"
-      app:layout_constraintEnd_toEndOf="@id/glEnd"
-      app:layout_constraintTop_toBottomOf="@id/tvLogin"
-
+      android:layout_width="300dp"
+      android:layout_height="50dp"
       android:layout_marginTop="60dp"
       android:padding="10dp"
 
-      android:layout_width="300dp"
-      android:layout_height="50dp"/>
+      android:textSize="20dp"
+      app:layout_constraintEnd_toEndOf="@id/glEnd"
+
+      app:layout_constraintStart_toStartOf="@id/glStart"
+      app:layout_constraintTop_toBottomOf="@id/tvLogin" />
 
   <TextView
       android:id="@+id/tvLastName"
-      android:textSize="20dp"
-      app:layout_constraintStart_toStartOf="@id/glStart"
-      app:layout_constraintEnd_toEndOf="@id/glEnd"
-      app:layout_constraintTop_toBottomOf="@id/tvName"
-
+      android:layout_width="300dp"
+      android:layout_height="50dp"
       android:layout_marginTop="20dp"
       android:padding="10dp"
 
-      android:layout_width="300dp"
-      android:layout_height="50dp"/>
+      android:textSize="20dp"
+      app:layout_constraintEnd_toEndOf="@id/glEnd"
+
+      app:layout_constraintStart_toStartOf="@id/glStart"
+      app:layout_constraintTop_toBottomOf="@id/tvName" />
 
   <TextView
       android:id="@+id/tvEmail"
-      android:textSize="20dp"
-      app:layout_constraintStart_toStartOf="@id/glStart"
-      app:layout_constraintEnd_toEndOf="@id/glEnd"
-      app:layout_constraintTop_toBottomOf="@id/tvLastName"
-
+      android:layout_width="300dp"
+      android:layout_height="50dp"
       android:layout_marginTop="20dp"
       android:padding="10dp"
 
-      android:layout_width="300dp"
-      android:layout_height="50dp"/>
+      android:textSize="20dp"
+      app:layout_constraintEnd_toEndOf="@id/glEnd"
+
+      app:layout_constraintStart_toStartOf="@id/glStart"
+      app:layout_constraintTop_toBottomOf="@id/tvLastName" />
 
   <TextView
       android:id="@+id/tvPassword"
-      android:textSize="20dp"
-      app:layout_constraintStart_toStartOf="@id/glStart"
-      app:layout_constraintEnd_toEndOf="@id/glEnd"
-      app:layout_constraintTop_toBottomOf="@id/tvEmail"
-
+      android:layout_width="300dp"
+      android:layout_height="50dp"
       android:layout_marginTop="20dp"
       android:padding="10dp"
 
-      android:layout_width="300dp"
-      android:layout_height="50dp"/>
+      android:textSize="20dp"
+      app:layout_constraintEnd_toEndOf="@id/glEnd"
+
+      app:layout_constraintStart_toStartOf="@id/glStart"
+      app:layout_constraintTop_toBottomOf="@id/tvEmail" />
 
   <TextView
       android:id="@+id/tvSex"
-      android:textSize="20dp"
-      app:layout_constraintStart_toStartOf="@id/glStart"
-      app:layout_constraintEnd_toEndOf="@id/glEnd"
-      app:layout_constraintTop_toBottomOf="@id/tvPassword"
-
+      android:layout_width="300dp"
+      android:layout_height="50dp"
       android:layout_marginTop="20dp"
       android:padding="10dp"
-      android:layout_width="300dp"
-      android:layout_height="50dp"/>
+
+      android:textSize="20dp"
+      app:layout_constraintEnd_toEndOf="@id/glEnd"
+      app:layout_constraintStart_toStartOf="@id/glStart"
+      app:layout_constraintTop_toBottomOf="@id/tvPassword" />
 
   <Button
       android:id="@+id/btnHome"
-      android:text="Inicio"
-      android:background="@drawable/rounded_edittext"
-      app:layout_constraintStart_toStartOf="@id/glStart"
-      app:layout_constraintEnd_toEndOf="@id/glEnd"
-      app:layout_constraintTop_toBottomOf="@id/tvSex"
-
+      android:layout_width="300dp"
+      android:layout_height="40dp"
       android:layout_marginTop="20dp"
+      android:background="@drawable/rounded_edittext"
       android:padding="5dp"
 
-      android:layout_width="300dp"
-      android:layout_height="40dp"/>
+      android:text="Inicio"
+      app:layout_constraintEnd_toEndOf="@id/glEnd"
 
-
+      app:layout_constraintStart_toStartOf="@id/glStart"
+      app:layout_constraintTop_toBottomOf="@id/tvSex" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

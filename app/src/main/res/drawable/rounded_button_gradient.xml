@@ -2,12 +2,13 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
 
-    <corners android:radius="16dp"/> <!-- Adjust the radius as needed -->
-
-    <solid android:background="@drawable/backgorund_gradient_primary_secondary"/> <!-- Background color -->
-
+    <gradient
+        android:angle="0"
+        android:startColor="?attr/colorPrimary"
+        android:endColor="?attr/colorSecondary"
+        android:type="linear" />
     <stroke
         android:width="2dp"
-        android:color="#CCCCCC"/> <!-- Border color -->
-
+        android:color="?attr/colorSecondary"/> <!-- Border color -->
+    <corners android:radius="12dp"/>  <!-- Rounded corners -->
 </shape>

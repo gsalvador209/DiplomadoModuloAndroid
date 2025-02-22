@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Heading1" parent="Base.Theme.AndroidModule1">
+        <item name="android:textSize">50sp</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="RoundedLayout" parent="Base.Theme.AndroidModule1">
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/rounded_edittext</item>
+    </style>
+
+    <style name="RoundedButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:background">@drawable/rounded_button_gradient</item>
+    </style>
+
+
+
+
+
+
+</resources>
