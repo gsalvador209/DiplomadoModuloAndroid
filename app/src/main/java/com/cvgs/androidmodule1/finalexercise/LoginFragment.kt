@@ -1,5 +1,6 @@
 package com.cvgs.androidmodule1.finalexercise
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Build
@@ -9,6 +10,7 @@ import android.text.Spanned
 import android.text.TextPaint
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
+import android.util.TypedValue
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +19,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import com.cvgs.androidmodule1.R
 import com.cvgs.androidmodule1.databinding.FragmentLoginBinding
+import com.cvgs.androidmodule1.homework.salvadorchavez.tarea1.utils.getThemeColor
 import com.cvgs.androidmodule1.homework.salvadorchavez.tarea1.utils.isNotFilled
 import com.cvgs.androidmodule1.homework.salvadorchavez.tarea1.utils.markAsInvalid
 import com.cvgs.androidmodule1.homework.salvadorchavez.tarea1.utils.resetOnTyping
@@ -50,7 +53,7 @@ class LoginFragment : Fragment() {
             override fun updateDrawState(ds: TextPaint) {
                 super.updateDrawState(ds)
                 ds.isUnderlineText = true
-                ds.color = Color.MAGENTA
+                ds.color = context!!.getThemeColor(com.google.android.material.R.attr.colorPrimary)
             }
         }
 
@@ -86,17 +89,22 @@ class LoginFragment : Fragment() {
 
                     val message = registeredUser?.name ?: getString(R.string.login_error)
 
-                    val alertDialog = AlertDialog.Builder(requireContext())
-                        .setTitle(title)
-                        .setMessage(message)
-                        .setPositiveButton(R.string.btn_send) { _, _ ->
-                            val intent = Intent(requireContext(), StartUpActivity::class.java).apply {
-                                putExtra("EXTRA_USER", registeredUser)
-                            }
-                            startActivity(intent)
-                        }
-                        .create()
-                    alertDialog.show()
+//                    val alertDialog = AlertDialog.Builder(requireContext())
+//                        .setTitle(title)
+//                        .setMessage(message)
+//                        .setPositiveButton(R.string.btn_send) { _, _ ->
+//                            val intent = Intent(requireContext(), StartUpActivity::class.java).apply {
+//                                putExtra("EXTRA_USER", registeredUser)
+//                            }
+//                            startActivity(intent)
+//                        }
+//                        .create()
+//                    alertDialog.show()
+                    val homeIntent = Intent(requireContext(), StartUpActivity::class.java).apply{
+                        putExtra("EXTRA_USER",registeredUser)
+
+                    }
+                    startActivity(homeIntent)
 
                 } else {
                     val alertDialog = AlertDialog.Builder(requireContext())
@@ -121,6 +129,12 @@ class LoginFragment : Fragment() {
     companion object {
         @JvmStatic
         fun newInstance() = LoginFragment()
+    }
+
+    fun Context.getThemeColor(attr: Int): Int {
+        val typedValue = TypedValue()
+        theme.resolveAttribute(attr, typedValue, true)
+        return typedValue.data
     }
 }
 

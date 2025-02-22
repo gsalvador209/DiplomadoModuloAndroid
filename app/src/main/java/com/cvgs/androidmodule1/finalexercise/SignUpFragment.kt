@@ -121,11 +121,7 @@ class SignUpFragment : Fragment() {
                             .replace(R.id.fragmentContainer, fragment)
                             .addToBackStack("LoginFragment")
                             .commit()
-                        Toast.makeText(
-                            requireContext(),
-                            getString(R.string.no_account),
-                            Toast.LENGTH_LONG
-                        ).show()
+
                     }
                     .setNegativeButton(getString(R.string.btn_cancel), null)
                     .create()

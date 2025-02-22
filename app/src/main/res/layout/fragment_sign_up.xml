@@ -41,8 +41,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <ImageView
-        android:src="@drawable/chava_gradient"
+        <FrameLayout
+        android:background="@drawable/backgorund_gradient_primary_secondary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/glDiv"
@@ -54,27 +54,21 @@
     <TextView
         android:id="@+id/tvLogin"
         android:text="@string/sign_up"
-        android:textSize="50sp"
-        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/glDiv"
         app:layout_constraintStart_toStartOf="@id/glStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+
+        style="@style/Heading1"/>
 
     <EditText
         android:id="@+id/etName"
         android:hint="@string/name_hint"
-        android:background="@drawable/rounded_edittext"
 
         app:layout_constraintStart_toStartOf="@id/glStart"
         app:layout_constraintEnd_toEndOf="@id/glEnd"
         app:layout_constraintTop_toBottomOf="@id/tvLogin"
 
         android:layout_marginTop="60dp"
-        android:padding="10dp"
-
-        android:layout_width="300dp"
-        android:layout_height="40dp"/>
+        style="@style/RoundedLayout"/>
 
     <EditText
         android:id="@+id/etLastName"
@@ -86,10 +80,7 @@
         app:layout_constraintTop_toBottomOf="@id/etName"
 
         android:layout_marginTop="20dp"
-        android:padding="10dp"
-
-        android:layout_width="300dp"
-        android:layout_height="40dp"/>
+        style="@style/RoundedLayout"/>
 
     <EditText
         android:id="@+id/etEmail"
@@ -102,10 +93,7 @@
         app:layout_constraintTop_toBottomOf="@id/etLastName"
 
         android:layout_marginTop="20dp"
-        android:padding="10dp"
-
-        android:layout_width="300dp"
-        android:layout_height="40dp"/>
+        style="@style/RoundedLayout"/>
 
     <EditText
         android:id="@+id/etPassword"
@@ -118,26 +106,20 @@
         app:layout_constraintTop_toBottomOf="@id/etEmail"
 
         android:layout_marginTop="20dp"
-        android:padding="10dp"
 
-        android:layout_width="300dp"
-        android:layout_height="40dp"/>
+        style="@style/RoundedLayout"/>
 
     <EditText
         android:id="@+id/etPassword2"
         android:hint="@string/repeat_password_hint"
         android:inputType="textPassword"
-        android:background="@drawable/rounded_edittext"
-
         app:layout_constraintStart_toStartOf="@id/glStart"
         app:layout_constraintEnd_toEndOf="@id/glEnd"
         app:layout_constraintTop_toBottomOf="@id/etPassword"
 
         android:layout_marginTop="20dp"
-        android:padding="10dp"
 
-        android:layout_width="300dp"
-        android:layout_height="40dp"/>
+        style="@style/RoundedLayout"/>
 
     <RadioGroup
         android:id="@+id/rgSex"
